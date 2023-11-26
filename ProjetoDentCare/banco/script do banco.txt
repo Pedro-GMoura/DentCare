@@ -1,0 +1,26 @@
+CREATE TABLE `cadastro` (
+  `idcadastro` int(11) NOT NULL,
+  `user` varchar(45) NOT NULL,
+  `pass` varchar(60) NOT NULL,
+  `emailregistro` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+-- --------------------------------------------------------
+
+
+CREATE TABLE `consulta` (
+  `cpf` varchar(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `data` date NOT NULL,
+  `tipo_atendimento` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+-- --------------------------------------------------------
+
+CREATE TABLE `formulario` (
+  `idformulario` int(11) NOT NULL,
+  `nome_completo` varchar(150) NOT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `email` varchar(70) DEFAULT NULL,
+  `mensagem` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
