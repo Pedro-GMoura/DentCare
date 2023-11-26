@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/11/2023 às 23:35
+-- Tempo de geração: 26/11/2023 às 19:52
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -36,6 +36,16 @@ CREATE TABLE `cadastro` (
   `emailregistro` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
+--
+-- Despejando dados para a tabela `cadastro`
+--
+
+INSERT INTO `cadastro` (`idcadastro`, `user`, `pass`, `emailregistro`) VALUES
+(35, 'teste2', '123456', 'pedro@gmail.com'),
+(36, 'diegs', '123', 'diegs@u.com'),
+(37, 'vitor', '12345', 'vitor@gmail.com'),
+(38, 'admin', 'admin', 'admin@admin.com');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +58,17 @@ CREATE TABLE `consulta` (
   `data` date NOT NULL,
   `tipo_atendimento` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Despejando dados para a tabela `consulta`
+--
+
+INSERT INTO `consulta` (`cpf`, `nome`, `data`, `tipo_atendimento`) VALUES
+('00000000011', 'Pedro ', '2023-11-06', 'endodontia'),
+('12', 'teste', '2023-11-20', 'Ortodontia'),
+('123', 'Pedro Henrique', '2023-11-28', 'proteses'),
+('12345678900', 'Pedro', '2023-11-27', 'ortodontia'),
+('4', 'Pedro Henrique', '2023-11-27', 'endodontia');
 
 -- --------------------------------------------------------
 
@@ -62,6 +83,18 @@ CREATE TABLE `formulario` (
   `email` varchar(70) DEFAULT NULL,
   `mensagem` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Despejando dados para a tabela `formulario`
+--
+
+INSERT INTO `formulario` (`idformulario`, `nome_completo`, `telefone`, `email`, `mensagem`) VALUES
+(26, 'teste', 'teste', 'teste@gmail.com', 'teste123'),
+(27, 'Pedro Henrique', '2323', 'pedronerymoura@gmail.com', 'OIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII'),
+(28, 'Pedro', '1234567', 'pedronerymoura@gmail.com', 'oioioioi'),
+(29, 'vitor', '12345', 'teste@gmail.com', 'OI tudo bem?'),
+(30, 'vitor', '2323', 'teste@gmail.com', 'Oi tudo bem? teste'),
+(31, 'teste', '1234567', 'teste@gmail.com', 'Oi');
 
 --
 -- Índices para tabelas despejadas
@@ -93,13 +126,13 @@ ALTER TABLE `formulario`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `idcadastro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idcadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de tabela `formulario`
 --
 ALTER TABLE `formulario`
-  MODIFY `idformulario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idformulario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

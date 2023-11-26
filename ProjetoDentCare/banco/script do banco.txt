@@ -1,3 +1,15 @@
+--
+-- Banco de dados: `dentcaretrabalho`
+--
+CREATE DATABASE IF NOT EXISTS `dentcaretrabalho` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
+USE `dentcaretrabalho`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `cadastro`
+--
+
 CREATE TABLE `cadastro` (
   `idcadastro` int(11) NOT NULL,
   `user` varchar(45) NOT NULL,
@@ -7,6 +19,9 @@ CREATE TABLE `cadastro` (
 
 -- --------------------------------------------------------
 
+--
+-- Estrutura para tabela `consulta`
+--
 
 CREATE TABLE `consulta` (
   `cpf` varchar(11) NOT NULL,
@@ -15,7 +30,13 @@ CREATE TABLE `consulta` (
   `tipo_atendimento` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
+
+
 -- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `formulario`
+--
 
 CREATE TABLE `formulario` (
   `idformulario` int(11) NOT NULL,
@@ -24,3 +45,4 @@ CREATE TABLE `formulario` (
   `email` varchar(70) DEFAULT NULL,
   `mensagem` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
