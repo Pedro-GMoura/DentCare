@@ -1,8 +1,8 @@
-<?php
+<?php 
 include_once("conexao.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+ 
     $cpf = $_POST["cpf"];
     $nome = $_POST["nome"];
     $data = $_POST["data"];

@@ -1,9 +1,9 @@
-<?php 
+<?php  
 session_start();
 
 if(isset($_POST["logsubmit"]) && !empty($_POST["login"])  && !empty($_POST["senha"])) {
 
-    include_once('conexao.php');
+    include_once('conexao.php'); 
 
     $login = $_POST['login'];
     $senha = $_POST['senha'];

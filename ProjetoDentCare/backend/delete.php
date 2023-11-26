@@ -1,5 +1,5 @@
 <?php 
-
+ 
 if(!empty($_GET["id"])) {
     include_once("conexao.php");
 
@@ -18,7 +18,7 @@ if(!empty($_GET["id"])) {
      }
 
    }else{
-    header('Location:../consultas.php');
+    header('Location:../consultas.php'); 
    }
  
 ?>

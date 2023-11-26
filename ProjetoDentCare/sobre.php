@@ -6,8 +6,8 @@
     <title>DentCare</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    <header class="cabecalho">
+<body> 
+    <header class="cabecalho"> 
         <nav>
             <div class="nav_logo"><a href="index.php">DentCare</a></div>
             <ul class="nav_links">
@@ -16,7 +16,16 @@
                 <li class="link"><a href="servicos.php">Serviços</a></li>
                 <li class="link"><a href="contato.php">Contato</a></li>
             </ul>
-            <a href="login.php"><button class="btn">Login</button></a>
+            <?php
+                session_start();
+                if(isset($_SESSION['login'])) {
+    
+                 echo '<a href="backend/sair.php"><button style="background-color: rgb(250, 95, 95);" class="btn">Sair</button></a>';
+                } else {
+    
+                echo '<a href="login.php"><button class="btn">Login</button></a>';
+                }
+            ?>
         </nav>
     </header>
 

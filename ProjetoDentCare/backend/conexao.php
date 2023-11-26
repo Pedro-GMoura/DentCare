@@ -1,10 +1,10 @@
 <?php 
-
+ 
     $dbHost = "Localhost";
     $dbUsername = "root";
     $dbPassword = "";
 
-    $dbName = "dentcaretrabalho";
+    $dbName = "dentcaretrabalho"; 
 
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 

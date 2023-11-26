@@ -1,5 +1,5 @@
-<?php 
-    session_start();
+<?php  
+    session_start(); 
     // print_r($_SESSION);
 
     if((!isset($_SESSION['login'])==true) and (!isset($_SESSION['senha']))==true){
@@ -75,7 +75,16 @@ if(!empty($_GET["id"])) {
                 <li class="link"><a href="servicos.php">Serviços</a></li>
                 <li class="link"><a href="contato.php">Contato</a></li>
             </ul>
-            <a href="backend/sair.php"><button class="btn">Sair</button></a>
+            <?php
+                session_start();
+                if(isset($_SESSION['login'])) {
+    
+                 echo '<a href="backend/sair.php"><button style="background-color: rgb(250, 95, 95);" class="btn">Sair</button></a>';
+                } else {
+    
+                echo '<a href="login.php"><button class="btn">Login</button></a>';
+                }
+            ?>
         </nav>
 </header>
 
