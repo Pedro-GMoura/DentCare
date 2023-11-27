@@ -36,9 +36,6 @@ if(!empty($_GET["id"])) {
     $nome = $user_data["nome"];
     $data = $user_data["data"];
     
-
-            print_r($cpf);
-
      }
 
    }else{
