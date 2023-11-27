@@ -76,7 +76,7 @@ if(!empty($_GET["id"])) {
                 <li class="link"><a href="contato.php">Contato</a></li>
             </ul>
             <?php
-                session_start();
+    
                 if(isset($_SESSION['login'])) {
     
                  echo '<a href="backend/sair.php"><button style="background-color: rgb(250, 95, 95);" class="btn">Sair</button></a>';
