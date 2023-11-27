@@ -1,6 +1,6 @@
-<?php  
+<?php 
     session_start(); 
-    // print_r($_SESSION);
+    // print_r($_SESSION)    ;
 
     if((!isset($_SESSION['login'])==true) and (!isset($_SESSION['senha']))==true){
        
@@ -36,14 +36,11 @@ if(!empty($_GET["id"])) {
     $nome = $user_data["nome"];
     $data = $user_data["data"];
     
-     }
+    }
 
    }else{
     header('Location:consultas.php');
    }
-
-  
-
     //echo '<script>';
     //echo 'window.alert("Edição efetuado com sucesso!");';
     //echo '</script>';
